@@ -1,11 +1,9 @@
 export default class Card {
   static render({ value, onClick }, parentElement) {
-    const element = document.createElement('div')
+    const element = document.createElement('figure')
     element.className = 'card'
 
-    element.innerHTML = `
-      <span>${value}</span>
-    `
+    element.innerHTML = `<img src="images/${value}.jpg" alt="@${value}">`
     element.addEventListener('click', onClick)
 
     if (parentElement) parentElement.appendChild(element)
